@@ -13,7 +13,7 @@
         <div class="container mx-auto">
             <div class="flex justify-between items-center py-1.5 px-5 bg-white shadow-lg fixed top-0 left-0 right-0 md:px-28 lg:px-24 lg:py-5 xl:py-5 xl:px-40">
                 <h1 class="uppercase text-3xl text-gray-600 font-semibold cursor-pointer xl:text-4xl">Sailor</h1>
-                <div class="lg:hidden">
+                <div class="lg:hidden cursor-pointer popup-btn">
                     <i class="bi bi-list" style="font-size: 30px;"></i>
                 </div>
                 <div class="space-x-5 font-semibold text-gray-600 hidden lg:block">
@@ -28,6 +28,42 @@
                     <span class="hover:text-red-600 cursor-pointer xl:text-lg">Blog</span>
                     <span class="hover:text-red-600 cursor-pointer xl:text-lg">Contact</span>
                     <span class="bg-red-600 py-2 px-5 rounded-md text-white cursor-pointer hover:bg-opacity-80 xl:text-lg">Get Started</span>
+                </div>
+            </div>
+            <div class="fixed top-0 right-0 left-0 bg-gray-500 bg-opacity-50 h-full hidden popup">
+                <div class="container mx-auto">
+                    <div class="flex justify-end px-4 mt-12">
+                        <i class="bi bi-x" style="font-size: 30px; color: white;cursor: pointer;" id="close-btn"></i>
+                    </div>
+                    <div class="absolute top-24 right-3 bottom-3 left-3 pt-5 pb-10 bg-white  px-5 space-y-4 font-semibold overflow-y-auto">
+                        <span class="block text-red-600">Home</span>
+                        <div class="flex justify-between items-center drop-down">
+                            <span class="block">About</span>
+                            <i class="bi bi-chevron-down" style="font-size: small;"></i>
+                        </div>
+                        <div class="space-y-4 px-6 bg-white pt-4 pb-6 box font-normal hidden first-drop">
+                            <span class="block">About</span>
+                            <span class="block">Team</span>
+                            <span class="block">Testimonials</span>
+                            <div class="flex justify-between items-center drop-down2">
+                                <span class="block">Deep Drop Down</span>
+                                <i class="bi bi-chevron-down" style="font-size: small;"></i>
+                            </div>
+                            <div class="space-y-4 px-6 box font-normal py-4 hidden second-drop">
+                                <span class="block">Deep Drop Down 1</span>
+                                <span class="block">Deep Drop Down 2</span>
+                                <span class="block">Deep Drop Down 3</span>
+                                <span class="block">Deep Drop Down 4</span>
+                                <span class="block">Deep Drop Down 5</span>
+                            </div>
+                        </div>
+                        <span class="block">Services</span>
+                        <span class="block">Portfolio</span>
+                        <span class="block">Pricing</span>
+                        <span class="block">Blog</span>
+                        <span class="block">Contact</span>
+                        <div class="bg-red-600 rounded-md px-7 text-white py-1.5">Get Started</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -421,5 +457,6 @@
         &copy; Copyright Sailor. All Rights Reserved
        <span class="block text-sm text-gray-400 pt-3">Designed by Constantine</span>
     </div>
+    <script src="./dom.js"></script>
 </body>
 </html>
