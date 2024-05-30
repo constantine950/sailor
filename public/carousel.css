@@ -1,0 +1,54 @@
+.owl-nav{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 350px;
+    right: 10px;
+    left: 10px;
+}
+
+body > div.relative > div > div.owl-nav > button.owl-prev{
+    background-color: gray;
+    opacity: 0.4;
+    width: 60px;
+    height: 60px;
+    border-radius: 9999px;
+}
+body > div.relative > div > div.owl-nav > button.owl-next{
+    background-color: gray;
+    opacity: 0.4;
+    width: 60px;
+    height: 60px;
+    border-radius: 9999px;
+}
+div.owl-dots{
+    display: none;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: transitionIn  0.75s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade {
+    animation: fadeIn 0.75s ease-out forwards;
+}
