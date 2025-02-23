@@ -1,518 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./carousel.css">
-    <link rel="stylesheet" href="./output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./carousel.css" />
+    <link rel="stylesheet" href="./output.css" />
     <title>Sailor</title>
-</head>
-<body class="animate-fade">
+  </head>
+  <body class="animate-fade">
     <div class="relative">
-        <!-- nav bar -->
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center py-1.5 px-5 bg-white shadow-lg fixed top-0 left-0 right-0 z-10 md:px-28 lg:px-24 lg:py-4 xl:px-32">
-                <h1 class="uppercase text-2xl text-gray-600 font-semibold cursor-pointer xl:text-3xl">Sailor</h1>
+      <!-- nav bar -->
+      <div class="container mx-auto">
+        <div
+          class="flex justify-between items-center py-1.5 px-5 bg-white shadow-lg fixed top-0 left-0 right-0 z-10 md:px-28 lg:px-24 lg:py-4 xl:px-32"
+        >
+          <h1
+            class="uppercase text-2xl text-gray-600 font-semibold cursor-pointer xl:text-3xl"
+          >
+            Sailor
+          </h1>
 
-                <div class="lg:hidden cursor-pointer popup">
-                    <i class="bi bi-list" style="font-size: 27px;"></i>
-                </div>
+          <div class="lg:hidden cursor-pointer popup">
+            <i class="bi bi-list" style="font-size: 27px"></i>
+          </div>
 
-                <div class="space-x-7 font-semibold text-gray-600 hidden lg:block">
-                    <span class="text-red-600 cursor-pointer xl:text-lg">Home</span>
-                    <div class="inline-flex items-center dropdown relative space-x-1 cursor-pointer xl:text-lg ">
-                        <div class="hover:text-red-600 trigger">
-                            <span>About</span> 
-                            <i class="bi bi-chevron-down" style="font-size: 13px;"></i>
-                        </div>
-                        <div class="absolute animate-fade-in content top-10 left-0 w-60 space-y-4 px-6 hidden bg-white pt-4 pb-6 box font-normal">
-                            <span class="block hover:text-red-600">About</span>
-                            <span class="block hover:text-red-600">Team</span>
-                            <span class="block hover:text-red-600">Testimonials</span>
-                            <div class="relative dropdown cursor-pointer">
-                                <div class="hover:text-red-600 items-center trigger">
-                                    <span>Deep Drop Down</span>
-                                    <i class="bi bi-chevron-right" style="font-size: small; float: right;"></i>
-                                </div>
-                                <div class="space-y-4 animate-fade-in content absolute bg-white top-10 left-53 w-60 hidden px-6 box font-normal py-4">
-                                    <span class="block hover:text-red-600">Deep Drop Down 1</span>
-                                    <span class="block hover:text-red-600">Deep Drop Down 2</span>
-                                    <span class="block hover:text-red-600">Deep Drop Down 3</span>
-                                    <span class="block hover:text-red-600">Deep Drop Down 4</span>
-                                    <span class="block hover:text-red-600">Deep Drop Down 5</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="hover:text-red-600 cursor-pointer xl:text-lg">Services</span>
-                    <span class="hover:text-red-600 cursor-pointer xl:text-lg">Portfolio</span>
-                    <span class="hover:text-red-600 cursor-pointer xl:text-lg">Pricing</span>
-                    <span class="hover:text-red-600 cursor-pointer xl:text-lg">Blog</span>
-                    <span class="hover:text-red-600 cursor-pointer xl:text-lg">Contact</span>
-                    <span class="bg-red-600 py-2 px-5 rounded-md text-white cursor-pointer hover:bg-opacity-80 xl:text-lg">Get Started</span>
+          <div class="space-x-7 font-semibold text-gray-600 hidden lg:block">
+            <span class="text-red-600 cursor-pointer xl:text-lg">Home</span>
+            <div
+              class="inline-flex items-center dropdown relative space-x-1 cursor-pointer xl:text-lg"
+            >
+              <div class="hover:text-red-600 trigger">
+                <span>About</span>
+                <i class="bi bi-chevron-down" style="font-size: 13px"></i>
+              </div>
+              <div
+                class="absolute close-dropdown animate-fade-in content top-10 left-0 w-60 space-y-4 px-6 hidden bg-white pt-4 pb-6 box font-normal"
+              >
+                <span class="block hover:text-red-600">Team</span>
+                <span class="block hover:text-red-600">Testimonials</span>
+                <div class="relative dropdown cursor-pointer">
+                  <div class="hover:text-red-600 items-center trigger">
+                    <span>Deep Drop Down</span>
+                    <i
+                      class="bi bi-chevron-right"
+                      style="font-size: small; float: right"
+                    ></i>
+                  </div>
+                  <div
+                    class="space-y-4 animate-fade-in content absolute bg-white top-10 left-53 w-60 hidden close-deep-dropdown px-6 box font-normal py-4"
+                  >
+                    <span class="block hover:text-red-600"
+                      >Deep Drop Down 1</span
+                    >
+                    <span class="block hover:text-red-600"
+                      >Deep Drop Down 2</span
+                    >
+                    <span class="block hover:text-red-600"
+                      >Deep Drop Down 3</span
+                    >
+                    <span class="block hover:text-red-600"
+                      >Deep Drop Down 4</span
+                    >
+                    <span class="block hover:text-red-600"
+                      >Deep Drop Down 5</span
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
-
-            <div class="fixed animate-fade top-0 right-0 left-0 z-10 bg-gray-500 bg-opacity-50 h-full hidden popup-content">
-                <div class="container mx-auto">
-                    <div class="flex justify-end px-4 mt-12 popup-hide">
-                        <i class="bi bi-x" style="font-size: 30px; color: white;cursor: pointer;"></i>
-                    </div>
-                    <div class="absolute dropdown top-24 right-3 bottom-3 left-3 pt-5 pb-10 bg-white  px-5 space-y-4 font-semibold overflow-y-auto">
-                        <span class="block text-red-600">Home</span>
-                        <div class="flex justify-between items-center cursor-pointer trigger">
-                            <span class="block">About</span>
-                            <i class="bi bi-chevron-down" style="font-size: small;"></i>
-                        </div>
-                        <div class="space-y-4 dropdown animate-fade-in content px-6 bg-white pt-4 pb-6 box font-normal hidden">
-                            <span class="block">About</span>
-                            <span class="block">Team</span>
-                            <span class="block">Testimonials</span>
-                            <div class="flex justify-between items-center cursor-pointer trigger">
-                                <span class="block">Deep Drop Down</span>
-                                <i class="bi bi-chevron-down" style="font-size: small;"></i>
-                            </div>
-                            <div class="space-y-4 px-6 animate-fade-in box font-normal py-4 hidden content">
-                                <span class="block">Deep Drop Down 1</span>
-                                <span class="block">Deep Drop Down 2</span>
-                                <span class="block">Deep Drop Down 3</span>
-                                <span class="block">Deep Drop Down 4</span>
-                                <span class="block">Deep Drop Down 5</span>
-                            </div>
-                        </div>
-                        <span class="block">Services</span>
-                        <span class="block">Portfolio</span>
-                        <span class="block">Pricing</span>
-                        <span class="block">Blog</span>
-                        <span class="block">Contact</span>
-                        <div class="bg-red-600 rounded-md px-7 text-white py-1.5">Get Started</div>
-                    </div>
-                </div>
-            </div>
+            <span class="hover:text-red-600 cursor-pointer xl:text-lg"
+              >Services</span
+            >
+            <span class="hover:text-red-600 cursor-pointer xl:text-lg"
+              >Portfolio</span
+            >
+            <span class="hover:text-red-600 cursor-pointer xl:text-lg"
+              >Pricing</span
+            >
+            <span class="hover:text-red-600 cursor-pointer xl:text-lg"
+              >Blog</span
+            >
+            <span class="hover:text-red-600 cursor-pointer xl:text-lg"
+              >Contact</span
+            >
+            <span
+              class="bg-red-600 py-2 px-5 rounded-md text-white cursor-pointer hover:bg-opacity-80 xl:text-lg"
+              >Get Started</span
+            >
+          </div>
         </div>
+
+        <div
+          class="fixed animate-fade top-0 right-0 left-0 z-10 bg-gray-500 bg-opacity-50 h-full hidden popup-content"
+        >
+          <div class="container mx-auto">
+            <div class="flex justify-end px-4 mt-12 popup-hide">
+              <i
+                class="bi bi-x"
+                style="font-size: 30px; color: white; cursor: pointer"
+              ></i>
+            </div>
+            <div
+              class="absolute dropdown top-24 right-3 bottom-3 left-3 pt-5 pb-10 bg-white px-5 space-y-4 font-semibold overflow-y-auto"
+            >
+              <span class="block text-red-600">Home</span>
+              <div
+                class="flex justify-between items-center cursor-pointer trigger"
+              >
+                <span class="block">About</span>
+                <i class="bi bi-chevron-down" style="font-size: small"></i>
+              </div>
+              <div
+                class="space-y-4 dropdownn animate-fade-in content px-6 bg-white pt-4 pb-6 box font-normal hidden"
+              >
+                <span class="block">Team</span>
+                <span class="block">Testimonials</span>
+                <div
+                  class="flex justify-between items-center cursor-pointer trigger"
+                >
+                  <span class="block">Deep Drop Down</span>
+                  <i class="bi bi-chevron-down" style="font-size: small"></i>
+                </div>
+                <div
+                  class="space-y-4 px-6 animate-fade-in box font-normal py-4 hidden content"
+                >
+                  <span class="block">Deep Drop Down 1</span>
+                  <span class="block">Deep Drop Down 2</span>
+                  <span class="block">Deep Drop Down 3</span>
+                  <span class="block">Deep Drop Down 4</span>
+                  <span class="block">Deep Drop Down 5</span>
+                </div>
+              </div>
+              <span class="block">Services</span>
+              <span class="block">Portfolio</span>
+              <span class="block">Pricing</span>
+              <span class="block">Blog</span>
+              <span class="block">Contact</span>
+              <div
+                class="bg-red-600 hover:bg-opacity-80 rounded-md px-7 text-white py-1.5"
+              >
+                Get Started
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="relative">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <div class="h-screen relative bg-cover bg-top bg-no-repeat" style="background-image: url(./img/slide-1.jpg);">
-                    <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
-                        <div class="absolute top-[19rem] left-14 right-14 items-center text-center text-white">
-                            <div class="container mx-auto">
-                                <h2 class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl">Sailor</h2>
-                                <p class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28">Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex eaque, cupiditate excepturi corrupti officiis. Ullam molestiae?</p>
-                                <span class="bg-red-600 px-5 py-2 rounded">Read More</span>
-                            </div>
-                        </div>
-                    </div>
+    <div class="relative onClose">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div
+            class="h-screen relative bg-cover bg-top bg-no-repeat"
+            style="background-image: url(/public/img/slide-1.jpg)"
+          >
+            <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
+              <div
+                class="absolute top-[19rem] left-14 right-14 items-center text-center text-white"
+              >
+                <div class="container mx-auto">
+                  <h2
+                    class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl"
+                  >
+                    Sailor
+                  </h2>
+                  <p
+                    class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28"
+                  >
+                    Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex
+                    eaque, cupiditate excepturi corrupti officiis. Ullam
+                    molestiae?
+                  </p>
+                  <span
+                    class="bg-red-600 px-5 py-2 hover:bg-opacity-80 cursor-pointer rounded"
+                    >Read More</span
+                  >
                 </div>
+              </div>
             </div>
-            <div class="item">
-                <div class="h-screen relative bg-cover bg-top bg-no-repeat" style="background-image: url(./img/slide-2.jpg);">
-                    <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
-                        <div class="absolute top-[19rem] left-20 right-20 text-center text-white lg:px-7 xl:px-10">
-                            <div class="container mx-auto">
-                                <h2 class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl">Voluptatibus</h2>
-                                <p class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28">Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex eaque, cupiditate excepturi corrupti officiis. Ullam molestiae?</p>
-                                <span class="bg-red-600 px-5 py-2 rounded">Read More</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="h-screen relative bg-cover bg-top bg-no-repeat" style="background-image: url(./img/slide-3.jpg);">
-                    <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
-                        <div class="absolute top-[19rem] left-20 right-20 text-white text-center lg:px-7 xl:px-10">
-                            <div class="container mx-auto">
-                                <h2 class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl">Consectetur</h2>
-                                <p class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28">Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex eaque, cupiditate excepturi corrupti officiis. Ullam molestiae?</p>
-                                <span class="bg-red-600 px-5 py-2 rounded">Read More</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="item">
+          <div
+            class="h-screen relative bg-cover bg-top bg-no-repeat"
+            style="background-image: url(/public/img/slide-2.jpg)"
+          >
+            <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
+              <div
+                class="absolute top-[19rem] left-20 right-20 text-center text-white lg:px-7 xl:px-10"
+              >
+                <div class="container mx-auto">
+                  <h2
+                    class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl"
+                  >
+                    Voluptatibus
+                  </h2>
+                  <p
+                    class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28"
+                  >
+                    Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex
+                    eaque, cupiditate excepturi corrupti officiis. Ullam
+                    molestiae?
+                  </p>
+                  <span
+                    class="bg-red-600 px-5 py-2 hover:bg-opacity-80 cursor-pointer rounded"
+                    >Read More</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div
+            class="h-screen relative bg-cover bg-top bg-no-repeat"
+            style="background-image: url(/public/img/slide-3.jpg)"
+          >
+            <div class="bg-[#1d1d1d] bg-opacity-60 h-full">
+              <div
+                class="absolute top-[19rem] left-20 right-20 text-white text-center lg:px-7 xl:px-10"
+              >
+                <div class="container mx-auto">
+                  <h2
+                    class="text-3xl font-bold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl"
+                  >
+                    Consectetur
+                  </h2>
+                  <p
+                    class="pt-4 pb-10 text-sm tracking-wider md:text-xl xl:px-28"
+                  >
+                    Lorem ipsum dolor sit amet consectetur elit. Libero saepe ex
+                    eaque, cupiditate excepturi corrupti officiis. Ullam
+                    molestiae?
+                  </p>
+                  <span
+                    class="bg-red-600 px-5 py-2 hover:bg-opacity-80 cursor-pointer rounded"
+                    >Read More</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="px-5 md:px-28 lg:px-24 xl:px-40">
-        <div class="container mx-auto lg:grid grid-cols-2 gap-20">
-            <div class="pt-14 xl:px-0">
-                <span class="text-2xl md:text-3xl font-bold text-gray-800">EUM IPSAM LABORUM DELENITI VELITENA
-                </span>
-                <p class="text-lg md:text-xl pt-6 text-gray-800">Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave
-                </p>
-            </div>
-            <div class="pt-8 lg:pt-14">
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quaerat rem nobis voluptatem unde corrupti corporis ipsa tempore aliquid, ratione rerum? Cum voluptatum totam amet expedita sunt id accusantium! Vitae?
-                </p>
-                <div class="flex items-center space-x-2 pt-4">
-                    <div class="text-red-600">
-                        <i class="bi bi-check2-all" style="font-size: 20px;"></i>
-                    </div>
-                    <span>Ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
-                </div>
-                <div class="flex items-center space-x-2">
-                    <div class="text-red-600">
-                        <i class="bi bi-check2-all" style="font-size: 20px;"></i>
-                    </div>
-                    <span>Duis aute irure dolor in reprehenderit in voluptate velit</span> 
-                </div>
-                <div class="flex items-center space-x-2">
-                    <div class="text-red-600">
-                        <i class="bi bi-check2-all" style="font-size: 20px;"></i>
-                    </div>
-                    <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> 
-                </div>
-                <p class="pt-5 italic">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maxime, dolore minima  praesentium sunt aliquam non.
-                </p>
-            </div>
+      <div class="container mx-auto lg:grid grid-cols-2 gap-20">
+        <div class="pt-14 xl:px-0">
+          <span class="text-2xl md:text-3xl font-bold text-gray-800"
+            >EUM IPSAM LABORUM DELENITI VELITENA
+          </span>
+          <p class="text-lg md:text-xl pt-6 text-gray-800">
+            Voluptatem dignissimos provident quasi corporis voluptates sit assum
+            perenda sruen jonee trave
+          </p>
         </div>
+        <div class="pt-8 lg:pt-14">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
+            quaerat rem nobis voluptatem unde corrupti corporis ipsa tempore
+            aliquid, ratione rerum? Cum voluptatum totam amet expedita sunt id
+            accusantium! Vitae?
+          </p>
+          <div class="flex items-center space-x-2 pt-4">
+            <div class="text-red-600">
+              <i class="bi bi-check2-all" style="font-size: 20px"></i>
+            </div>
+            <span>Ullamco laboris nisi ut aliquip ex ea commodo consequa</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="text-red-600">
+              <i class="bi bi-check2-all" style="font-size: 20px"></i>
+            </div>
+            <span
+              >Duis aute irure dolor in reprehenderit in voluptate velit</span
+            >
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="text-red-600">
+              <i class="bi bi-check2-all" style="font-size: 20px"></i>
+            </div>
+            <span
+              >Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span
+            >
+          </div>
+          <p class="pt-5 italic">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            maxime, dolore minima praesentium sunt aliquam non.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class=" bg-gray-100 mt-16 md:hidden">
-        <div class="container mx-auto flex justify-evenly items-center p-5">
-            <div class="space-y-5 ">
-                <img class="w-36 object-cover" src="./img/client-6.png">
-                <img class="w-36 object-cover" src="./img/client-3.png">
-                <img class="w-36 object-cover" src="./img/client-1.png">
-            </div>
-            <div class="space-y-5">
-                <img class="w-36 object-cover" src="./img/client-4.png">
-                <img class="w-36 object-cover" src="./img/client-2.png">
-                <img class="w-36 object-cover" src="./img/client-5.png">
-            </div>
+    <div class="bg-gray-100 mt-16 md:hidden">
+      <div class="container mx-auto flex justify-evenly items-center p-5">
+        <div class="space-y-5">
+          <img class="w-36 object-cover" src="./img/client-6.png" />
+          <img class="w-36 object-cover" src="./img/client-3.png" />
+          <img class="w-36 object-cover" src="./img/client-1.png" />
         </div>
+        <div class="space-y-5">
+          <img class="w-36 object-cover" src="./img/client-4.png" />
+          <img class="w-36 object-cover" src="./img/client-2.png" />
+          <img class="w-36 object-cover" src="./img/client-5.png" />
+        </div>
+      </div>
     </div>
     <div class="hidden md:block lg:hidden bg-gray-50 mt-16 px-28">
-        <div class="container mx-auto grid grid-cols-3 items-center p-6">
-            <div class="space-y-5">
-                <img class="w-36 object-cover" src="./img/client-6.png">
-                <img class="w-36 object-cover" src="./img/client-3.png">
-            </div>
-            <div class="space-y-5">
-                <img class="w-36 object-cover" src="./img/client-1.png">
-                <img class="w-36 object-cover" src="./img/client-4.png">
-            </div>
-            <div class="space-y-5">
-                <img class="w-36 object-cover" src="./img/client-2.png">
-                <img class="w-36 object-cover" src="./img/client-5.png">
-            </div>
+      <div class="container mx-auto grid grid-cols-3 items-center p-6">
+        <div class="space-y-5">
+          <img class="w-36 object-cover" src="./img/client-6.png" />
+          <img class="w-36 object-cover" src="./img/client-3.png" />
         </div>
+        <div class="space-y-5">
+          <img class="w-36 object-cover" src="./img/client-1.png" />
+          <img class="w-36 object-cover" src="./img/client-4.png" />
+        </div>
+        <div class="space-y-5">
+          <img class="w-36 object-cover" src="./img/client-2.png" />
+          <img class="w-36 object-cover" src="./img/client-5.png" />
+        </div>
+      </div>
     </div>
     <div class="hidden px-24 lg:block xl:px-40 bg-gray-50 mt-14">
-        <div class="container mx-auto lg:flex items-center justify-center space-x-10 p-5">
-            <img class="w-28 object-cover" src="./img/client-6.png">
-            <img class="w-28 object-cover" src="./img/client-3.png">
-            <img class="w-28 object-cover" src="./img/client-1.png">
-            <img class="w-28 object-cover" src="./img/client-4.png">
-            <img class="w-28 object-cover" src="./img/client-2.png">
-            <img class="w-28 object-cover" src="./img/client-5.png"> 
-        </div>
+      <div
+        class="container mx-auto lg:flex items-center justify-center space-x-10 p-5"
+      >
+        <img class="w-28 object-cover" src="./img/client-6.png" />
+        <img class="w-28 object-cover" src="./img/client-3.png" />
+        <img class="w-28 object-cover" src="./img/client-1.png" />
+        <img class="w-28 object-cover" src="./img/client-4.png" />
+        <img class="w-28 object-cover" src="./img/client-2.png" />
+        <img class="w-28 object-cover" src="./img/client-5.png" />
+      </div>
     </div>
     <div class="px-5 pt-14 md:px-28 lg:px-24 xl:px-40">
-        <div class="container mx-auto md:grid grid-cols-2 gap-5">
-            <div>
-                <div class="flex space-x-8 p-8 bg-gray-100 rounded-md cursor-pointer">
-                    <div class="text-red-600">
-                    <i class="bi bi-envelope" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Lorem ipsum</span>
-                        <p class="text-sm">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-                </div>
-                <div class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7">
-                    <div class="text-red-600">
-                        <i class="bi bi-card-checklist" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Dolor Sitema</span>
-                        <p class="text-sm">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-                    </div>
-                </div>
-                <div class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7">
-                    <div class="text-red-600">
-                        <i class="bi bi-bar-chart" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Sed ut perspiciatis</span>
-                        <p class="text-sm">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-                </div>
+      <div class="container mx-auto md:grid grid-cols-2 gap-5">
+        <div>
+          <div class="flex space-x-8 p-8 bg-gray-100 rounded-md cursor-pointer">
+            <div class="text-red-600">
+              <i class="bi bi-envelope" style="font-size: 40px"></i>
             </div>
             <div>
-                <div class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-0">
-                    <div class="text-red-600">
-                        <i class="bi bi-binoculars" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Nemo Enim</span>
-                        <p class="text-sm">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                    </div>
-                </div>
-                <div class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7">
-                    <div class="text-red-600">
-                        <i class="bi bi-sun" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Magni Dolore</span>
-                        <p class="text-sm">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                    </div>
-                </div>
-                <div class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7">
-                    <div class="text-red-600">
-                        <i class="bi bi-calendar4-week" style="font-size: 40px;"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-semibold text-gray-600 hover:text-red-600">Eiusmod Tempor
-                        </span>
-                        <p class="text-sm">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-                    </div>
-                </div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Lorem ipsum</span
+              >
+              <p class="text-sm">
+                Voluptatum deleniti atque corrupti quos dolores et quas
+                molestias excepturi sint occaecati cupiditate non provident
+              </p>
             </div>
+          </div>
+          <div
+            class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7"
+          >
+            <div class="text-red-600">
+              <i class="bi bi-card-checklist" style="font-size: 40px"></i>
+            </div>
+            <div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Dolor Sitema</span
+              >
+              <p class="text-sm">
+                Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat tarad limino ata
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7"
+          >
+            <div class="text-red-600">
+              <i class="bi bi-bar-chart" style="font-size: 40px"></i>
+            </div>
+            <div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Sed ut perspiciatis</span
+              >
+              <p class="text-sm">
+                Voluptatum deleniti atque corrupti quos dolores et quas
+                molestias excepturi sint occaecati cupiditate non provident
+              </p>
+            </div>
+          </div>
         </div>
+        <div>
+          <div
+            class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-0"
+          >
+            <div class="text-red-600">
+              <i class="bi bi-binoculars" style="font-size: 40px"></i>
+            </div>
+            <div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Nemo Enim</span
+              >
+              <p class="text-sm">
+                Voluptatum deleniti atque corrupti quos dolores et quas
+                molestias excepturi sint occaecati cupiditate non provident
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7"
+          >
+            <div class="text-red-600">
+              <i class="bi bi-sun" style="font-size: 40px"></i>
+            </div>
+            <div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Magni Dolore</span
+              >
+              <p class="text-sm">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex space-x-8 p-8 bg-gray-100 mt-10 rounded-md cursor-pointer md:mt-7"
+          >
+            <div class="text-red-600">
+              <i class="bi bi-calendar4-week" style="font-size: 40px"></i>
+            </div>
+            <div>
+              <span
+                class="text-xl font-semibold text-gray-600 hover:text-red-600"
+                >Eiusmod Tempor
+              </span>
+              <p class="text-sm">
+                Et harum quidem rerum facilis est et expedita distinctio. Nam
+                libero tempore, cum soluta nobis est eligendi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="px-5 pt-24 pb-20 md:px-28 lg:px-24 xl:px-40">
-        <div class="container mx-auto">
-            <div class="flex justify-center items-center space-x-5 font-semibold">
-                <span class="bg-red-600 px-4 py-2 rounded-sm text-white">ALL</span>
-                <span>APP</span>
-                <span>CARD</span>
-                <span>WEB</span>
-            </div>
-            <div class="space-y-8 pt-8 md:hidden">
-                <img src="./img/portfolio-4.jpg"> 
-                <img src="./img/portfolio-5.jpg"> 
-                <img src="./img/portfolio-3.jpg"> 
-                <img src="./img/portfolio-2.jpg"> 
-                <img src="./img/portfolio-1.jpg"> 
-                <img src="./img/portfolio-9.jpg"> 
-                <img src="./img/portfolio-8.jpg"> 
-                <img src="./img/portfolio-7.jpg"> 
-                <img src="./img/portfolio-6.jpg"> 
-            </div>
-            <div class="hidden pt-10 md:flex space-x-3 lg:hidden">
-                <div class="space-y-5">
-                    <img src="./img/portfolio-5.jpg"> 
-                    <img src="./img/portfolio-4.jpg"> 
-                    <img src="./img/portfolio-3.jpg"> 
-                    <img src="./img/portfolio-2.jpg"> 
-            </div>
-            <div class="space-y-5">
-                    <img src="./img/portfolio-9.jpg"> 
-                    <img src="./img/portfolio-8.jpg"> 
-                    <img src="./img/portfolio-7.jpg"> 
-                    <img src="./img/portfolio-6.jpg"> 
-            </div>
-            </div>
-            <div class="pt-8 lg:grid grid-cols-3 gap-x-6 hidden">
-                <div>
-                    <img src="./img/portfolio-1.jpg">   
-                    <img class="pt-6" src="./img/portfolio-6.jpg">
-                </div>
-                <div> 
-                    <img src="./img/portfolio-5.jpg" alt="">
-                    <img class="pt-6" src="./img/portfolio-3.jpg"> 
-                    <img class="pt-6" src="./img/portfolio-2.jpg"> 
-                </div>
-                <div>
-                    <img src="./img/portfolio-4.jpg" alt="">
-                    <img class="pt-6" src="./img/portfolio-9.jpg"> 
-                    <img class="pt-6" src="./img/portfolio-8.jpg"> 
-                    <img class="pt-6" src="./img/portfolio-7.jpg"> 
-                </div>
-            </div>
+      <div class="container mx-auto">
+        <div class="flex justify-center items-center space-x-5 font-semibold">
+          <span
+            class="bg-red-600 px-4 py-2 rounded-sm cursor-pointer text-white"
+            >ALL</span
+          >
+          <span class="cursor-pointer">APP</span>
+          <span class="cursor-pointer">CARD</span>
+          <span class="cursor-pointer">WEB</span>
         </div>
+        <div class="space-y-8 pt-8 md:hidden">
+          <img src="./img/portfolio-4.jpg" />
+          <img src="./img/portfolio-5.jpg" />
+          <img src="./img/portfolio-3.jpg" />
+          <img src="./img/portfolio-2.jpg" />
+          <img src="./img/portfolio-1.jpg" />
+          <img src="./img/portfolio-9.jpg" />
+          <img src="./img/portfolio-8.jpg" />
+          <img src="./img/portfolio-7.jpg" />
+          <img src="./img/portfolio-6.jpg" />
+        </div>
+        <div class="hidden pt-10 md:flex space-x-3 lg:hidden">
+          <div class="space-y-5">
+            <img src="./img/portfolio-5.jpg" />
+            <img src="./img/portfolio-4.jpg" />
+            <img src="./img/portfolio-3.jpg" />
+            <img src="./img/portfolio-2.jpg" />
+          </div>
+          <div class="space-y-5">
+            <img src="./img/portfolio-9.jpg" />
+            <img src="./img/portfolio-8.jpg" />
+            <img src="./img/portfolio-7.jpg" />
+            <img src="./img/portfolio-6.jpg" />
+          </div>
+        </div>
+        <div class="pt-8 lg:grid grid-cols-3 gap-x-6 hidden">
+          <div>
+            <img src="./img/portfolio-1.jpg" />
+            <img class="pt-6" src="./img/portfolio-6.jpg" />
+          </div>
+          <div>
+            <img src="./img/portfolio-5.jpg" alt="" />
+            <img class="pt-6" src="./img/portfolio-3.jpg" />
+            <img class="pt-6" src="./img/portfolio-2.jpg" />
+          </div>
+          <div>
+            <img src="./img/portfolio-4.jpg" alt="" />
+            <img class="pt-6" src="./img/portfolio-9.jpg" />
+            <img class="pt-6" src="./img/portfolio-8.jpg" />
+            <img class="pt-6" src="./img/portfolio-7.jpg" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="bg-gray-500 px-5 md:px-28 lg:px-24 xl:px-40">
-        <div class="container mx-auto">
-            <div class="pt-16 pb-6 md:grid grid-cols-2 md:pb-16 lg:hidden">
-                <div>
-                    <div>
-                        <span class="text-3xl font-semibold text-white">Sailor</span>
-                        <span class="block text-white w-36 pt-5 text-sm">A108 Adam Street NY 535022, USA</span>
-                        <span class="block text-white pt-6"><span class="font-semibold">Phone:</span> +1 5589 55488 55</span>
-                        <span class="block text-white"><span class="font-semibold">Email:</span> info@example.com</span>
-                        <div class="flex items-center space-x-3 text-white pt-5">
-                            <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                                <i class="bi bi-twitter-x"></i>
-                            </div>
-                            <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                                <i class="bi bi-facebook"></i>
-                            </div>
-                            <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                                <i class="bi bi-instagram"></i>
-                            </div>
-                            <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                                <i class="bi bi-skype"></i>
-                            </div>
-                            <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                                <i class="bi bi-linkedin"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h1 class="text-xl text-white pt-6">Useful Links</h1>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Home</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>About us</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Services</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Terms of service</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Privacy policy</span> 
-                        </div>
-                    </div>
+      <div class="container mx-auto">
+        <div class="pt-16 pb-6 md:grid grid-cols-2 md:pb-16 lg:hidden">
+          <div>
+            <div>
+              <span class="text-3xl font-semibold text-white">Sailor</span>
+              <span class="block text-white w-36 pt-5 text-sm"
+                >A108 Adam Street NY 535022, USA</span
+              >
+              <span class="block text-white pt-6"
+                ><span class="font-semibold">Phone:</span> +1 5589 55488
+                55</span
+              >
+              <span class="block text-white"
+                ><span class="font-semibold">Email:</span>
+                info@example.com</span
+              >
+              <div class="flex items-center space-x-3 text-white pt-5">
+                <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
+                  <i class="bi bi-twitter-x"></i>
                 </div>
-                <div>
-                    <div>
-                        <h2 class="text-xl text-white pt-6 md:pt-2">Our Services</h2>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Web Design</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Web Development</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Product Management</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Marketing</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-4 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Graphic Design</span> 
-                        </div>
-                    </div>
-                    <div>
-                        <h3  class="text-xl text-white pt-6">Our Newsletter</h3>
-                        <p class="text-white pt-4">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <div class="pt-6 flex space-x-0.5">
-                            <input class="h-10 w-96 rounded-l-md" type="text">
-                            <button class="bg-red-700 text-white px-4 py-2 rounded-r-md">Subscribe</button>
-                        </div>
-                    </div>
+                <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
+                  <i class="bi bi-facebook"></i>
                 </div>
+                <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
+                  <i class="bi bi-instagram"></i>
+                </div>
+                <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
+                  <i class="bi bi-skype"></i>
+                </div>
+                <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+              </div>
             </div>
-
-            <div class="hidden lg:grid grid-cols-3 gap-7 pt-10 pb-14">
-                <div class="container mx-auto">
-                    <span class="text-3xl font-semibold text-white">Sailor</span>
-                    <span class="block text-white pt-5 text-lg">A108 Adam Street NY 535022, USA</span>
-                    <span class="block text-white pt-6 text-lg"><span class="font-semibold">Phone:</span> +1 5589 55488 55</span>
-                    <span class="block text-white text-lg"><span class="font-semibold">Email:</span> info@example.com</span>
-                    <div class="flex items-center space-x-3 text-white pt-5">
-                        <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                            <i class="bi bi-twitter-x" style="font-size: 20px;"></i>
-                        </div>
-                        <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                            <i class="bi bi-facebook" style="font-size: 20px;"></i>
-                        </div>
-                        <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                            <i class="bi bi-instagram" style="font-size: 20px;"></i>
-                        </div>
-                        <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                            <i class="bi bi-skype" style="font-size: 20px;"></i>
-                        </div>
-                        <div class="bg-gray-600 py-1 px-1.5 rounded-sm">
-                            <i class="bi bi-linkedin" style="font-size: 20px;"></i>
-                        </div>
-                    </div> 
-                </div>
-                
-                <div class="grid grid-cols-2 container mx-auto">
-                    <div>
-                        <h1 class="text-xl text-white">Useful Links</h1>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Home</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>About us</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Services</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Terms of service</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Privacy policy</span> 
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="text-xl text-white">Our Services</h2>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Web Design</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Web Development</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Product Management</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Marketing</span> 
-                        </div>
-                        <div class="flex items-center space-x-1 pt-3.5 text-gray-300">
-                            <i class="bi bi-chevron-right" style="font-size: 11px;"></i>
-                            <span>Graphic Design</span> 
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container mx-auto">
-                    <h3  class="text-xl text-white pt-4">Our Newsletter</h3>
-                    <p class="text-white text-lg pt-4">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                    <div class="pt-6 flex space-x-0.5">
-                        <input class="h-10 w-96 rounded-l-md" type="text">
-                        <button class="bg-red-700 text-white px-4 py-2 rounded-r-md">Subscribe</button>
-                    </div>
-                </div>
+            <div>
+              <h1 class="text-xl text-white pt-6">Useful Links</h1>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Home</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>About us</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Services</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Terms of service</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Privacy policy</span>
+              </div>
             </div>
+          </div>
+          <div>
+            <div>
+              <h2 class="text-xl text-white pt-6 md:pt-2">Our Services</h2>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Web Design</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Web Development</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Product Management</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Marketing</span>
+              </div>
+              <div class="flex items-center space-x-1 pt-4 text-gray-300">
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Graphic Design</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-white pt-6">Our Newsletter</h3>
+              <p class="text-white pt-4">
+                Tamen quem nulla quae legam multos aute sint culpa legam noster
+                magna
+              </p>
+              <div class="pt-6 flex space-x-0.5">
+                <input class="h-10 w-96 rounded-l-md" type="text" />
+                <button class="bg-red-700 text-white px-4 py-2 rounded-r-md">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="hidden lg:grid grid-cols-3 gap-7 pt-10 pb-14">
+          <div class="container mx-auto">
+            <span class="text-3xl font-semibold text-white">Sailor</span>
+            <span class="block text-white pt-5 text-lg"
+              >A108 Adam Street NY 535022, USA</span
+            >
+            <span class="block text-white pt-6 text-lg"
+              ><span class="font-semibold">Phone:</span> +1 5589 55488 55</span
+            >
+            <span class="block text-white text-lg"
+              ><span class="font-semibold">Email:</span> info@example.com</span
+            >
+            <div class="flex items-center space-x-3 text-white pt-5">
+              <div class="bg-gray-600 cursor-pointer py-1 px-1.5 rounded-sm">
+                <i class="bi bi-twitter-x" style="font-size: 20px"></i>
+              </div>
+              <div class="bg-gray-600 cursor-pointer py-1 px-1.5 rounded-sm">
+                <i class="bi bi-facebook" style="font-size: 20px"></i>
+              </div>
+              <div class="bg-gray-600 cursor-pointer py-1 px-1.5 rounded-sm">
+                <i class="bi bi-instagram" style="font-size: 20px"></i>
+              </div>
+              <div class="bg-gray-600 cursor-pointer py-1 px-1.5 rounded-sm">
+                <i class="bi bi-skype" style="font-size: 20px"></i>
+              </div>
+              <div class="bg-gray-600 cursor-pointer py-1 px-1.5 rounded-sm">
+                <i class="bi bi-linkedin" style="font-size: 20px"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 container mx-auto">
+            <div>
+              <h1 class="text-xl text-white">Useful Links</h1>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Home</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>About us</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Services</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Terms of service</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Privacy policy</span>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-xl text-white">Our Services</h2>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Web Design</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Web Development</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Product Management</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Marketing</span>
+              </div>
+              <div
+                class="flex cursor-pointerx items-center space-x-1 pt-3.5 text-gray-300"
+              >
+                <i class="bi bi-chevron-right" style="font-size: 11px"></i>
+                <span>Graphic Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container mx-auto">
+            <h3 class="text-xl text-white pt-4">Our Newsletter</h3>
+            <p class="text-white text-lg pt-4">
+              Tamen quem nulla quae legam multos aute sint culpa legam noster
+              magna
+            </p>
+            <div class="pt-6 flex cursor-pointerx space-x-0.5">
+              <input class="h-10 w-96 rounded-l-md" type="text" />
+              <button class="bg-red-700 text-white px-4 py-2 rounded-r-md">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="bg-gray-600 text-center text-white py-7">
-        &copy; Copyright Sailor. All Rights Reserved
-       <span class="block text-sm text-gray-400 pt-3">Designed by Constantine</span>
+    <div class="bg-gray-600 text-center text-white py-7 relative">
+      &copy; Copyright Sailor. All Rights Reserved
+      <span class="block text-sm text-gray-400 pt-3"
+        >Designed by Constantine</span
+      >
+
+      <button
+        id="scrollUpBtn"
+        class="hidden fixed bottom-10 right-5 bg-blue-500 hover:bg-blue-700 text-2xl text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300"
+      >
+        ↑
+      </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./carousel.js"></script>
     <script src="./dom.js"></script>
-</body>
+  </body>
 </html>
